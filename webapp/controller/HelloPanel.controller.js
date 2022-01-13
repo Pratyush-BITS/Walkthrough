@@ -11,14 +11,12 @@ sap.ui.define([
 		"use strict";
 
 		return Controller.extend("com.learn.walkthrough.controller.App", {
-			onInit: function () {
-				var oData = {
-					recipient : {
-						name : "World"
-					}
-				};
-				var oModel = new JSONModel(oData);
-				this.getView().setModel(oModel);
-			}			
-		});
-	});
+            onPress: function(){
+				var oBundle = this.getView().getModel("i18n").getResourceBundle();
+				var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+				var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+				
+				MessageToast.show(sMsg);
+			}
+        });
+});

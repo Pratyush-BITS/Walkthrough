@@ -29,7 +29,7 @@
 
 			<Button
 				id="heyFragment"
-				text="say Hey"
+				text="{i18n>fragmentInfo}"
 				icon="sap-icon://begin"
 				press=".onOpenDialog"
 				class="sapUiSmallMarginEnd"

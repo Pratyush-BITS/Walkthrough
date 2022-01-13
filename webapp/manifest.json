@@ -10,7 +10,14 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
-    "ach": "ach"
+    "ach": "ach",
+
+    "dataSources": {
+			"invoice_alias": {
+				"uri": "model/Invoices.json",
+				"type": "JSON"
+			}
+		}
   },
   "sap.ui": {
     "technology": "UI5",
@@ -56,6 +63,10 @@
         "settings": {
           "bundleName": "com.learn.walkthrough.i18n.i18n"
         }
+      },
+      "invoice": {
+		    "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "invoice_alias"
       }
     },
     "resources": {

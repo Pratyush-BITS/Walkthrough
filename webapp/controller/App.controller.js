@@ -12,7 +12,6 @@ sap.ui.define([
 
 		return Controller.extend("com.learn.walkthrough.controller.App", {
 			onInit: function () {
-
 				var oData = {
 					recipient : {
 						name : "World"
@@ -20,7 +19,7 @@ sap.ui.define([
 				};
 				var oModel = new JSONModel(oData);
 				this.getView().setModel(oModel);
-
+	
 				var i18nModel = new ResourceModel({
 					bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
 				});

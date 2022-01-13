@@ -7,21 +7,24 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content >
-						
-						<Button 
-							text="{i18n>showHelloButtonText}"
-							press=".onPress"
-						/>
+				<Page id="page" title="{i18n>homePageTitle}">
+					<content>
+						<Panel 
+							headerText="{i18n>helloPanelTitle}">
+							<content>
+								<Button 
+									text="{i18n>showHelloButtonText}"
+									press=".onPress"
+								/>
 
-						<Input 
-							value = "{/recipient/name}" 
-							description="Hello {/recipient/name}" 
-							valueLiveUpdate="true" 
-							width="50%"
-						/>
-
+								<Input 
+									value = "{/recipient/name}" 
+									description="Hello {/recipient/name}" 
+									valueLiveUpdate="true" 
+									width="50%"
+								/>
+							</content>
+						</Panel>
 					</content>
 				</Page>
 			</pages>

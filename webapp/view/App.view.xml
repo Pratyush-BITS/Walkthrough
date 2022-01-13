@@ -9,7 +9,19 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content >
-						<Button text = "click me" press=".onPress"/>
+						
+						<Button 
+							text = "click me" 
+							press=".onPress"
+						/>
+
+						<Input 
+							value = "{/recipient/name}" 
+							description="Hello {/recipient/name}" 
+							valueLiveUpdate="true" 
+							width="50%"
+						/>
+
 					</content>
 				</Page>
 			</pages>

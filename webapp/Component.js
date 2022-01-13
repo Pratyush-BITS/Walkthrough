@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"com/learn/walkthrough/model/models"
-], function (UIComponent, Device, models) {
+	"com/learn/walkthrough/model/models",
+	"./controller/HelloDialog"
+], function (UIComponent, Device, models, HelloDialog) {
 	"use strict";
 
 	return UIComponent.extend("com.learn.walkthrough.Component", {
@@ -20,11 +21,21 @@ sap.ui.define([
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 
+			//set Dialog
+			this._helloDialog = new HelloDialog(this.getRootControl());
+
 			// enable routing
 			this.getRouter().initialize();
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+		},
+		exit: function(){
+			this._helloDialog.destroy();
+			delete this._helloDialog;
+		},
+		openHelloDialog: function(){
+			this._helloDialog.open();
 		}
 	});
 });

@@ -8,6 +8,12 @@
 		<App id="app" class="myAppDemoWT">
 			<pages>
 				<Page id="page" title="{i18n>homePageTitle}">
+					<headerContent>
+						<Button
+							icon="sap-icon://bell"
+							press=".onOpenDialog"
+						/>
+					</headerContent>
 					<content>
 						<mvc:XMLView viewName="com.learn.walkthrough.view.HelloPanel"/>
 					</content>

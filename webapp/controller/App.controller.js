@@ -10,14 +10,8 @@ sap.ui.define([
 		"use strict";
 
 		return Controller.extend("com.learn.walkthrough.controller.App", {
-			onInit: function () {
-				var oData = {
-					recipient : {
-						name : "World"
-					}
-				};
-				var oModel = new JSONModel(oData);
-				this.getView().setModel(oModel);
+			onOpenDialog: function(){
+				this.getOwnerComponent().openHelloDialog();
 			}			
 		});
 	});

@@ -11,7 +11,7 @@
 					<content >
 						
 						<Button 
-							text = "click me" 
+							text="{i18n>showHelloButtonText}"
 							press=".onPress"
 						/>
 

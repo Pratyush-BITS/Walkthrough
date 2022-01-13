@@ -20,10 +20,10 @@ sap.ui.define([
 				var oModel = new JSONModel(oData);
 				this.getView().setModel(oModel);
 	
-				var i18nModel = new ResourceModel({
-					bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
-				});
-				this.getView().setModel(i18nModel, "i18n");
+				// var i18nModel = new ResourceModel({
+				// 	bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
+				// });
+				// this.getView().setModel(i18nModel, "i18n");
 			},
 			onPress: function(){
 				var oBundle = this.getView().getModel("i18n").getResourceBundle();

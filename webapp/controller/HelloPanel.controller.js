@@ -1,12 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/core/Fragment"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller,MessageToast,JSONModel) {
+	function (Controller,MessageToast, Fragment) {
 		"use strict";
 
 		return Controller.extend("com.learn.walkthrough.controller.HelloPanel", {
@@ -16,6 +16,16 @@ sap.ui.define([
 				var sMsg = oBundle.getText("helloMsg", [sRecipient]);
 				
 				MessageToast.show(sMsg);
+			},
+			onOpenDialog : function () {
+				if (!this.pDialog) {
+					this.pDialog = this.loadFragment({
+						name: "com.learn.walkthrough.view.HelloDialog"
+					});
+				} 
+				this.pDialog.then(function(oDialog) {
+					oDialog.open();
+				});
 			}
         });
 });

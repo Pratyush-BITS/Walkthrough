@@ -27,6 +27,14 @@
 				class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
 			/>
 
+			<Button
+				id="heyFragment"
+				text="say Hey"
+				icon="sap-icon://begin"
+				press=".onOpenDialog"
+				class="sapUiSmallMarginEnd"
+			/>
+
 		</content>
 	</Panel>
 </mvc:View>

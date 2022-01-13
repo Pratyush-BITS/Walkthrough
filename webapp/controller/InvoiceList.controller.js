@@ -12,7 +12,7 @@ sap.ui.define([
 		return Controller.extend("com.learn.walkthrough.controller.InvoiceList", {
 			onInit: function(){
 				var oCurrencyModel= new JSONModel({
-                    currency: "INR"
+                    INR: "₹"
                 });
                 this.getView().setModel(oCurrencyModel, "currency");
                

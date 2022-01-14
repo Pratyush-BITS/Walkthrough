@@ -27,7 +27,7 @@
       {
         "ProductName": "Salad",
         "Quantity": 2,
-        "ExtendedPrice": 8.8000,
+        "ExtendedPrice": 58.8000,
         "ShipperName": "ACME",
         "ShippedDate": "2015-04-12T00:00:00",
         "Status": "C"

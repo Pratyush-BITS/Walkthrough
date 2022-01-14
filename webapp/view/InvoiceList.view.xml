@@ -2,11 +2,25 @@
    controllerName="com.learn.walkthrough.controller.InvoiceList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
+   
    <List
-      headerText="{i18n>invoiceListTitle}"
+      id="invoiceList"
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{invoice>/Invoices}">
+      items="{invoice>/Invoices}"
+   >
+
+      <headerToolbar>
+         <Toolbar>
+            <HBox>
+               <Title text ="{i18n>invoiceListTitle}" width="40rem"/>
+               <VBox width="34.3rem">
+                  <SearchField search=".onFilterInvoices" placeholder='{i18n>searchInInvoiceList}'></SearchField>
+               </VBox>
+            </HBox>
+         </Toolbar>
+      </headerToolbar>
+
       <items>
 
          <ObjectListItem

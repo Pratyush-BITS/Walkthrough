@@ -4,12 +4,13 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"../model/Formatter",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
+	"sap/ui/model/FilterOperator",
+	"sap/ui/core/format/NumberFormat"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller,MessageToast,JSONModel,Formatter,Filter,FilterOperator) {
+	function (Controller,MessageToast,JSONModel,Formatter,Filter,FilterOperator,NumberFormat) {
 		"use strict";
 
 		return Controller.extend("com.learn.walkthrough.controller.InvoiceList", {

@@ -1,6 +1,7 @@
 {
     "Invoices": [
       {
+        "ProductId": 12,
         "ProductName": "Pineapple",
         "Quantity": 21,
         "ExtendedPrice": 87.2000,
@@ -9,6 +10,7 @@
         "Status": "A"
       },
       {
+        "ProductId": 65,
         "ProductName": "Milk",
         "Quantity": 4,
         "ExtendedPrice": 9.99999,
@@ -17,6 +19,7 @@
         "Status": "B"
       },
       {
+        "ProductId": 32,
         "ProductName": "Canned Beans",
         "Quantity": 3,
         "ExtendedPrice": 6.85000,
@@ -25,6 +28,7 @@
         "Status": "B"
       },
       {
+        "ProductId": 54,
         "ProductName": "Salad",
         "Quantity": 2,
         "ExtendedPrice": 58.8000,
@@ -33,6 +37,7 @@
         "Status": "C"
       },
       {
+        "ProductId": 19,
         "ProductName": "Bread",
         "Quantity": 1,
         "ExtendedPrice": 2.71212,

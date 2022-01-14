@@ -3,7 +3,7 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    
-   <List
+   <Table
       id="invoiceList"
       class="sapUiResponsiveMargin"
       width="auto"
@@ -27,34 +27,67 @@
          </Toolbar>
       </headerToolbar>
 
+      <columns>
+			<Column
+				hAlign="End"
+				minScreenWidth="Small"
+				demandPopin="true"
+				width="5em">
+				<Text text="{i18n>columnQuantity}"/>
+			</Column>
+			<Column>
+				<Text text="{i18n>columnName}"/>
+			</Column>
+			<Column
+				minScreenWidth="Small"
+				demandPopin="true">
+				<Text text="{i18n>columnStatus}"/>
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="false">
+				<Text text="{i18n>columnSupplier}"/>
+			</Column>
+			<Column
+				hAlign="Begin">
+				<Text text="{i18n>columnPrice}"/>
+			</Column>
+		</columns>
+
       <items>
 
-         <ObjectListItem
-            title="{invoice>Quantity} x {invoice>ProductName}"
-            number="{
-               parts: [{path: 'invoice>ExtendedPrice'}, {path: 'currency>/INR'}],
-               type: 'sap.ui.model.type.Currency',
-               formatOptions: {
-                  showMeasure: false
-               }
-            }"
-            numberUnit="{currency>/INR}"
-            numberState="{= 
-               ${invoice>ExtendedPrice} > 70 ? 'Error' : ${invoice>ExtendedPrice} > 50 ? 'Warning' : 'Success'
-            }"
-            type="Navigation"
-				press="onPress"
+         <ColumnListItem
+				type="Navigation"
+				press=".onPress"
          >
+            <cells>
+               <ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+					<ObjectIdentifier title="{invoice>ProductName}"/>
+            
+               <Text text="{
+						path: 'invoice>Status',
+						formatter: '.format.statusText'
+					}"/>
 
-            <firstStatus> 
-               <ObjectStatus text="{
-                  path: 'invoice>Status',
-                  formatter: '.format.statusText'
-               }"/>
+               <Text text="{invoice>ShipperName}"/>
 
-            </firstStatus>
+               <ObjectNumber
+                  
+						number="{
+                     parts: [{path: 'invoice>ExtendedPrice'}],
+                     type: 'sap.ui.model.type.Currency',
+                     formatOptions: {
+                        showMeasure: false
+                     }
+                  }"
+                  unit="{currency>/INR}"
+                  state="{= 
+                     ${invoice>ExtendedPrice} > 70 ? 'Error' : ${invoice>ExtendedPrice} > 50 ? 'Warning' : 'Success'
+                  }"
 
-         </ObjectListItem>
-	</items>
-   </List>
+               />
+            </cells>
+         </ColumnListItem>
+	   </items>
+   </Table>
 </mvc:View>

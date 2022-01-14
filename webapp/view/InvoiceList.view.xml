@@ -40,8 +40,11 @@
             }"
             numberUnit="{currency>/INR}"
             numberState="{= 
-            ${invoice>ExtendedPrice} > 70 ? 'Error' : ${invoice>ExtendedPrice} > 50 ? 'Warning' : 'Success'
-            }">
+               ${invoice>ExtendedPrice} > 70 ? 'Error' : ${invoice>ExtendedPrice} > 50 ? 'Warning' : 'Success'
+            }"
+            type="Navigation"
+				press="onPress"
+         >
 
             <firstStatus> 
                <ObjectStatus text="{

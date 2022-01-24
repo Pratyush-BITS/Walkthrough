@@ -104,8 +104,8 @@
           "viewName": "Overview"
         },
         "detail": {
-          "viewId": "detail",
-          "viewName": "Detail"
+          "viewId": "detail", 
+          "viewName": "detail"
         }
       }
     }

@@ -1,5 +1,6 @@
 ## Application Details
 |               |
+
 | ------------- |
 |**Generation Date and Time**<br>Thu Jan 13 2022 20:02:25 GMT+0530 (India Standard Time)|
 |**App Generator**<br>@sap/generator-fiori|
